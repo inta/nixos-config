@@ -21,6 +21,7 @@ in
         programs.home-manager.enable = true;
 
         imports = [
+            ../../home/desktop/gnome.nix
             ../../home/shell
             ../../home/browser
             ../../home/editor/helix.nix
