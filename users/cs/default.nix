@@ -15,6 +15,7 @@ in
 
     imports = [
       ../../home/shell
+      ../../home/browser
     ];
 
     dconf = {
