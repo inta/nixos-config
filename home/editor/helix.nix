@@ -1,13 +1,16 @@
 { lib, pkgs, ... }:
 
 {
-  programs.helix= {
+  programs.helix = {
     enable = true;
 
     settings = {
       theme = "darcula";
       editor = {
-        rulers = [80 120];
+        rulers = [
+          80
+          120
+        ];
         # cursorline = true;
         bufferline = "multiple";
         line-number = "relative";
@@ -28,16 +31,24 @@
         };
       };
       keys.normal = {
-        esc = ["collapse_selection" "keep_primary_selection"];
-        "A-j" = ["search_selection" "extend_search_next"];
-        "A-h" = [":toggle lsp.display-inlay-hints"];
+        esc = [
+          "collapse_selection"
+          "keep_primary_selection"
+        ];
+        "A-j" = [
+          "search_selection"
+          "extend_search_next"
+        ];
+        "A-h" = [ ":toggle lsp.display-inlay-hints" ];
       };
     };
 
-    languages.language = [{
-      name = "nix";
-      auto-format = true;
-      formatter.command = lib.getExe pkgs.nixfmt;
-    }];
+    languages.language = [
+      {
+        name = "nix";
+        auto-format = true;
+        formatter.command = lib.getExe pkgs.nixfmt;
+      }
+    ];
   };
 }

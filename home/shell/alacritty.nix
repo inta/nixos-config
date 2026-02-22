@@ -4,11 +4,13 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      keyboard.bindings = {
-        action = "Quit";
-        key = "Q";
-        mods = "Control";
-      };
+      keyboard.bindings = [
+        {
+          action = "Quit";
+          key = "Q";
+          mods = "Control";
+        }
+      ];
       window.dimensions = {
         columns = 150;
         lines = 50;
@@ -26,7 +28,10 @@
         exec = "alacritty --class Quakelacritty --config-file ${config.xdg.configHome}/alacritty/quakelacritty.toml";
         icon = "Alacritty";
         terminal = false;
-        categories = [ "System" "TerminalEmulator" ];
+        categories = [
+          "System"
+          "TerminalEmulator"
+        ];
         settings = {
           StartupWMClass = "Quakelacritty";
         };

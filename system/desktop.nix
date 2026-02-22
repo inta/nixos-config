@@ -1,4 +1,6 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+
+{
   services.xserver.enable = false;
 
   # make sure to enable only one login manager

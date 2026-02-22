@@ -1,11 +1,16 @@
-{ config, inputs, pkgs, ... }:
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
     inputs.zen-browser.homeModules.beta
   ];
 
-  programs.zen-browser= {
+  programs.zen-browser = {
     enable = true;
     profiles.default = {
       extensions.packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
@@ -36,7 +41,7 @@
                 ];
               }
             ];
-            definedAliases = ["s"];
+            definedAliases = [ "s" ];
           };
         };
       };

@@ -71,7 +71,7 @@
         	echo ' ⋟ '
         end
       '';
-      
+
       fish_right_prompt = ''
         function fish_right_prompt
         	set cmd_status $status
