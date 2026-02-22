@@ -3,6 +3,7 @@
 {
   imports = [
     ./firefox.nix
+    ./zen.nix
   ];
 
   # add environment variables
