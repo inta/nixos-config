@@ -16,6 +16,7 @@ in
     imports = [
       ../../home/shell
       ../../home/browser
+      ../../home/editor/helix.nix
     ];
 
     dconf = {
