@@ -12,6 +12,8 @@ in
     isNormalUser = true;
   };
 
+  environment.localBinInPath = true;
+
   home-manager.users.${username} = {
     home.username = username;
     home.homeDirectory = "/home/${username}";
@@ -48,7 +50,7 @@ in
     };
 
     home.file = {
-      ".local/bin/tmux-sessionizr.sh" = {
+      ".local/bin/tmux-sessionizr" = {
         text = ''
           #!/usr/bin/env bash
 
