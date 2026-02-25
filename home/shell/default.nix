@@ -2,11 +2,11 @@
 
 {
     imports = [
-        # ./nushell
         # ./common.nix
         # ./starship.nix
         ./alacritty.nix
         ./fish.nix
+        ./nu.nix
         ./tmux.nix
     ];
 
@@ -35,7 +35,6 @@
         # bottom
         # iotop
         # iftop
-        meld
     ];
 
     # add environment variables
@@ -47,7 +46,6 @@
 
         # set default applications
         EDITOR = "nvim";
-        BROWSER = "firefox";
         TERMINAL = "alacritty";
 
         # enable scrolling in git diff

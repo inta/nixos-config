@@ -50,9 +50,13 @@
     # Install firefox.
     # programs.firefox.enable = true;
 
+    programs.fish.enable = true;
+
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
+        # fish
+        # nushell
         curl
         git
         helix

@@ -10,6 +10,7 @@ in
 {
     users.users.${username} = {
         isNormalUser = true;
+        # shell = pkgs.fish;
     };
 
     environment.localBinInPath = true;
@@ -24,7 +25,7 @@ in
             ../../home/desktop/gnome.nix
             ../../home/shell
             ../../home/browser
-            ../../home/editor/helix.nix
+            ../../home/development
         ];
 
         dconf = {
