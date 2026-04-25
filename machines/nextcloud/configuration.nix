@@ -18,7 +18,7 @@
   networking.firewall.allowedTCPPorts = [ 80 443 ];
 
   services.nextcloud = {
-    package = pkgs.nextcloud31;
+    package = pkgs.nextcloud32;
     hostName = "nextcloud.datenhalde.net";
     home = "/srv/nextcloud";
     enable = true;
