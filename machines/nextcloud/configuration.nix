@@ -36,7 +36,7 @@
     notify_push.enable = true;
     # notify_push.bendDomainToLocalhost = true;
     settings = {
-      trusted_proxies = ["192.168.1.1"];
+      trusted_proxies = ["192.168.192.1"];
       default_phone_region = "DE";
       default_timezone = "Europe/Berlin";
       maintenance_window_start = 1;

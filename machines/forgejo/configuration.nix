@@ -38,12 +38,10 @@
         SMTP_ADDR = "mail.datenhalde.net";
         FROM = "noreply@datenhalde.net";
         USER = "noreply@datenhalde.net";
-        PASSWD = builtins.readFile ./forgejo-mailer-password.txt;
       };
     };
-    # secrets = {
-    #   mailer.PASSWD = config.age.secrets.forgejo-mailer-password.path;
-    # };
+    secrets.mailer.PASSWD = "/etc/nixos/forgejo-mailer-password";
+    # secrets.mailer.PASSWD = config.age.secrets.forgejo-mailer-password.path;
   };
 
   # age.secrets.forgejo-mailer-password = {
