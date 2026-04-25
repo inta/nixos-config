@@ -110,7 +110,5 @@
                 };
             };
         };
-
-        suppressXdgMigrationWarning = true;
     };
 }
