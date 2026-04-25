@@ -3,6 +3,7 @@
 {
   imports = [
     (modulesPath + "/virtualisation/proxmox-lxc.nix")
+    ../../system/base.nix
   ];
 
   system.stateVersion = "24.05";

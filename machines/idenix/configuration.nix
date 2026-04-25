@@ -3,6 +3,7 @@
 {
     imports = [
         ./hardware-configuration.nix
+        ../../system/base.nix
         ../../system/boot.nix
         ../../system/locale.nix
         ../../system/home-manager.nix
@@ -13,13 +14,6 @@
     ];
 
     security.sudo.enable = false;
-
-    nix.settings.experimental-features = [
-        "nix-command"
-        "flakes"
-    ];
-    nix.gc.automatic = true;
-    nix.gc.options = "--delete-older-than 7d";
 
     networking.hostName = "idenix"; # Define your hostname.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
