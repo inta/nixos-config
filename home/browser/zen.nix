@@ -40,6 +40,25 @@
                 # linkhints
             ];
 
+            containers = {
+                personal = {
+                    id = 1;
+                    color = "blue";
+                    icon = "fingerprint";
+                };
+                dev = {
+                    id = 2;
+                    color = "orange";
+                    icon = "circle";
+                };
+                research = {
+                    id = 3;
+                    color = "turquoise";
+                    icon = "tree";
+                };
+            };
+            containersForce = true;
+
             settings = {
                 "extensions.autoDisableScopes" = 0;
 
