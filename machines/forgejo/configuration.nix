@@ -6,7 +6,7 @@
     ../../system/base.nix
   ];
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 
   environment.systemPackages = [
     pkgs.vim
@@ -62,7 +62,6 @@
       locations."/" = {
         proxyPass = "http://localhost:${toString config.services.forgejo.settings.server.HTTP_PORT}";
         proxyWebsockets = true;
-        recommendedProxySettings = true;
         extraConfig = ''
           client_max_body_size 512M;
         '';
