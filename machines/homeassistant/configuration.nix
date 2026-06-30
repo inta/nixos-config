@@ -13,11 +13,15 @@
   ];
 
   security.acme.acceptTerms = true;
-  security.acme.defaults = {
-    email = "cert@intanet.de";
-    # DNS-01 via INWX (no inbound ports needed, works behind WireGuard/LAN only)
+  security.acme.defaults.email = "cert@intanet.de";
+
+  # DNS-01 via INWX must be set per-cert: enableACME forces HTTP-01 (webroot) and
+  # dnsProvider is NOT inherited from defaults. Define the cert here and point
+  # nginx at it with useACMEHost — no inbound ports needed, works VPN/LAN-only.
+  security.acme.certs."homeassistant.datenhalde.net" = {
     dnsProvider = "inwx";
     environmentFile = "/etc/nixos/inwx.env";
+    group = "nginx";
   };
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
@@ -48,7 +52,7 @@
     recommendedTlsSettings = true;
 
     virtualHosts."homeassistant.datenhalde.net" = {
-      enableACME = true;
+      useACMEHost = "homeassistant.datenhalde.net";
       forceSSL = true;
       locations."/" = {
         proxyPass = "http://127.0.0.1:8123";
