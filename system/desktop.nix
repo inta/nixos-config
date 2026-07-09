@@ -14,6 +14,12 @@
         quake-terminal
     ];
 
+    programs.gnupg.agent = {
+        enable = true;
+        pinentryPackage = pkgs.pinentry-gnome3;
+        # pinentryPackage = pkgs.pinentry-curses;
+    };
+
     services.desktopManager.cosmic.enable = true;
     environment.cosmic.excludePackages = with pkgs; [
         cosmic-store

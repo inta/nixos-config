@@ -49,6 +49,13 @@ in
                 name = "Christoph";
                 email = "christoph@intanet.de";
             };
+            signing = {
+                key = "9B580BC806F0DD9D4C56DCD77B726069D6BDF363";
+                signByDefault = true;
+            };
+            extraConfig = {
+                gpg.format = "openpgp";
+            };
         };
 
         home.file = {

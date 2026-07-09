@@ -53,6 +53,7 @@
         # nushell
         curl
         git
+        gnupg
         helix
         neovim
         dnsutils
