@@ -37,7 +37,16 @@
                 HTTP_PORT = 3000;
                 SSH_PORT = builtins.head config.services.openssh.ports;
             };
-            service.DISABLE_REGISTRATION = true;
+            service = {
+                DISABLE_REGISTRATION = true;
+                DEFAULT_USER_VISIBILITY = "limited";
+                explore = {
+                    REQUIRE_SIGNIN_VIEW = true;
+                    DISABLE_USERS_PAGE = true;
+                    DISABLE_ORGANIZATIONS_PAGE = true;
+                };
+            };
+            repository.DEFAULT_PRIVATE = "private";
             actions = {
                 ENABLED = true;
                 DEFAULT_ACTIONS_URL = "github";
