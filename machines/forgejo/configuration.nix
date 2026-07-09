@@ -40,11 +40,11 @@
             service = {
                 DISABLE_REGISTRATION = true;
                 DEFAULT_USER_VISIBILITY = "limited";
-                explore = {
-                    REQUIRE_SIGNIN_VIEW = true;
-                    DISABLE_USERS_PAGE = true;
-                    DISABLE_ORGANIZATIONS_PAGE = true;
-                };
+            };
+            "service.explore" = {
+                REQUIRE_SIGNIN_VIEW = true;
+                DISABLE_USERS_PAGE = true;
+                DISABLE_ORGANIZATIONS_PAGE = true;
             };
             repository.DEFAULT_PRIVATE = "private";
             other.SHOW_FOOTER_VERSION = false;
