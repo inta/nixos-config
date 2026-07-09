@@ -47,6 +47,7 @@
                 };
             };
             repository.DEFAULT_PRIVATE = "private";
+            other.SHOW_FOOTER_VERSION = false;
             actions = {
                 ENABLED = true;
                 DEFAULT_ACTIONS_URL = "github";
