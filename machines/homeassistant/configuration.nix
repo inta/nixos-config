@@ -52,7 +52,7 @@
             "opnsense"
             "unifi"
             "snmp"
-            "imap"
+            # "imap"
             "caldav"
             "nextcloud"
             "immich"

@@ -23,7 +23,14 @@
     # the smb password is set manually once: smbpasswd -a cs
     users.users.cs = {
         isNormalUser = true;
+        uid = 1000;
         home = "/srv/home/cs";
+        extraGroups = [ "share" ];
+    };
+    users.users.schnossi = {
+        isNormalUser = true;
+        uid = 1001;
+        home = "/srv/home/schnossi";
         extraGroups = [ "share" ];
     };
 
