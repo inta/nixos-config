@@ -61,6 +61,10 @@
         usbutils
     ];
 
+    home-manager.users.cs.home.packages = with pkgs; [
+        gocryptfs
+    ];
+
     environment.variables.EDITOR = "nvim";
 
     # Some programs need SUID wrappers, can be configured further or are

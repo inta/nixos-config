@@ -28,6 +28,10 @@ in
             ../../home/development
         ];
 
+        home.packages = with pkgs; [
+            signal-desktop
+        ];
+
         dconf = {
             enable = true;
             settings = {
