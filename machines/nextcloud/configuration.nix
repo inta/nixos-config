@@ -26,7 +26,7 @@
     ];
 
     services.nextcloud = {
-        package = pkgs.nextcloud34;
+        package = pkgs.nextcloud35;
         hostName = "nextcloud.datenhalde.net";
         home = "/srv/nextcloud";
         enable = true;
