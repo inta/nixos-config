@@ -34,11 +34,7 @@
         configureRedis = true;
         caching.redis = true;
         database.createLocally = true;
-        config = {
-            dbtype = "pgsql";
-            adminuser = "admin";
-            adminpassFile = "/etc/nixos/nextcloud-admin-pass";
-        };
+        config.dbtype = "pgsql";
         autoUpdateApps.enable = true;
         maxUploadSize = "1G";
         notify_push.enable = true;

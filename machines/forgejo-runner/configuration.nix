@@ -18,21 +18,22 @@
 
     virtualisation.docker.enable = true;
 
-    services.gitea-actions-runner = {
-        package = pkgs.forgejo-runner;
-        instances.default = {
-            enable = true;
-            name = "forgejo-runner";
-            url = "https://code.datenhalde.net";
-            # register manually: Site Administration > Actions > Runners > Create new Runner,
-            # then put "TOKEN=<value>" into this file
-            tokenFile = "/etc/nixos/forgejo-runner-token";
-            labels = [
+    services.forgejo-runner.instances.default = {
+        enable = true;
+        settings = {
+            # uuid and token come from the runner registration (Site Administration > Actions > Runners);
+            # the token file holds the bare token, without a "TOKEN=" prefix
+            server.connections.default = {
+                url = "https://code.datenhalde.net";
+                uuid = "6c3251e0-e35a-4c08-8d92-9689f189f04a";
+            };
+            runner.labels = [
                 "ubuntu-latest:docker://ghcr.io/catthehacker/ubuntu:act-latest"
                 "docker:docker://docker:cli"
             ];
             # mount the host docker socket into job containers so `docker build` works
-            settings.container.docker_host = "automount";
+            container.docker_host = "automount";
         };
+        secrets.server.connections.default.token_url = "/etc/nixos/forgejo-runner-token";
     };
 }
