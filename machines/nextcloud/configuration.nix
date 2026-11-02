@@ -38,7 +38,7 @@
         autoUpdateApps.enable = true;
         maxUploadSize = "1G";
         notify_push.enable = true;
-        # notify_push.bendDomainToLocalhost = true;
+        notify_push.bendDomainToLocalhost = true;
         settings = {
             trusted_proxies = [ "192.168.192.1" ];
             default_phone_region = "DE";
